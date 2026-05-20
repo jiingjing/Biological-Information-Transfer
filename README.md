@@ -107,6 +107,8 @@ Recommended codon table
 - New strand is synthesised in the 5' → 3' direction
 - New strand is anti-parallel (has opposite orientation) and has complementary base pairing to the template strand
 
+  ![The steps of DNA Replication](https://openlearninglibrary.mit.edu/assets/courseware/v1/02dbcc2f4ff227938abdf49e01f463bd/asset-v1:OCW+Pre-7.01+1T2020+type@asset+block/m0_3.png)
+
 ### Transcription
 
 1. A promoter on the DNA tells RNA polymerase where to start transcription
@@ -119,6 +121,8 @@ Recommended codon table
 ---
 
 - RNA uses uracil (U) instead of thymine (T)
+
+  ![Transcription](https://openlearninglibrary.mit.edu/assets/courseware/v1/70f34ce5ec809f12c0a99d03a0251460/asset-v1:OCW+Pre-7.01+1T2020+type@asset+block/n0_newBW.png)
 
 ### Translation
 
@@ -133,12 +137,17 @@ Recommended codon table
 - A codon is a set of 3 consecutive nucleotides that together code for an amino acid
 - Protein chains grow from the amino (N) terminus to the carboxyl (C) terminus
 
+  ![A Codon Chart](https://openlearninglibrary.mit.edu/assets/courseware/v1/522a130818e51e7d580bc9834ad314b6/asset-v1:OCW+Pre-7.01+1T2020+type@asset+block/p0.png)
+  _A Codon Chart_
+
 ### Reading frames
 
 - DNA and RNA can be read in codons of three bases each
 - There are three forward reading frames for a single strand
 - There are three reverse reading frames for the complementary strand
 - Frame analysis is useful when the exact start position is unknown
+
+  ![Six different reading frames give six different ways for the same fragment of DNA to be transcribed and translated, three from each strand. The top three amino acid strings are read from left to right, whereas the bottom three strings are read from right to left. Stop codons are represented by XXX.](https://rosalind.info/media/problems/ba4b/reading_frames.png)
 
 ### Nucleotide rules
 
