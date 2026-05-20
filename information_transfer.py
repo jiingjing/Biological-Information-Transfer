@@ -41,3 +41,17 @@ class BioInfoTrans:
     def RNA_to_DNA(self, bases):
         # U -> T
         return bases.replace("U", "T")
+
+    def base_pair_DNA(self, bases):
+        # A - T
+        # G - C
+        base_table = str.maketrans("ATGC", "TACG")
+        base_pair = bases.translate(base_table)
+        return base_pair
+
+    def base_pair_RNA(self, bases):
+        # A - T
+        # G - C
+        base_table = str.maketrans("AUGC", "UACG")
+        base_pair = bases.translate(base_table)
+        return base_pair
