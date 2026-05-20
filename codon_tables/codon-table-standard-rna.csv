@@ -1,0 +1,65 @@
+Codon,Amino Acid,Short Name,Letter,Group
+UUU,Phenylalanine,Phe,F,Nonpolar
+UUC,Phenylalanine,Phe,F,Nonpolar
+UUA,Leucine,Leu,L,Nonpolar
+UUG,Leucine,Leu,L,Nonpolar
+UCU,Serine,Ser,S,Polar
+UCC,Serine,Ser,S,Polar
+UCA,Serine,Ser,S,Polar
+UCG,Serine,Ser,S,Polar
+UAU,Tyrosine,Tyr,Y,Polar
+UAC,Tyrosine,Tyr,Y,Polar
+UAA,Stop codon,Stop,*,Stop
+UAG,Stop codon,Stop,*,Stop
+UGU,Cysteine,Cys,C,Polar
+UGC,Cysteine,Cys,C,Polar
+UGA,Stop codon,Stop,*,Stop
+UGG,Tryptophan,Trp,W,Nonpolar
+CUU,Leucine,Leu,L,Nonpolar
+CUC,Leucine,Leu,L,Nonpolar
+CUA,Leucine,Leu,L,Nonpolar
+CUG,Leucine,Leu,L,Nonpolar
+CCU,Proline,Pro,P,Nonpolar
+CCC,Proline,Pro,P,Nonpolar
+CCA,Proline,Pro,P,Nonpolar
+CCG,Proline,Pro,P,Nonpolar
+CAU,Histidine,His,H,Basic
+CAC,Histidine,His,H,Basic
+CAA,Glutamine,Gln,Q,Polar
+CAG,Glutamine,Gln,Q,Polar
+CGU,Arginine,Arg,R,Basic
+CGC,Arginine,Arg,R,Basic
+CGA,Arginine,Arg,R,Basic
+CGG,Arginine,Arg,R,Basic
+AUU,Isoleucine,Ile,I,Nonpolar
+AUC,Isoleucine,Ile,I,Nonpolar
+AUA,Isoleucine,Ile,I,Nonpolar
+AUG,Methionine (Start),Met,M,Start
+ACU,Threonine,Thr,T,Polar
+ACC,Threonine,Thr,T,Polar
+ACA,Threonine,Thr,T,Polar
+ACG,Threonine,Thr,T,Polar
+AAU,Asparagine,Asn,N,Polar
+AAC,Asparagine,Asn,N,Polar
+AAA,Lysine,Lys,K,Basic
+AAG,Lysine,Lys,K,Basic
+AGU,Serine,Ser,S,Polar
+AGC,Serine,Ser,S,Polar
+AGA,Arginine,Arg,R,Basic
+AGG,Arginine,Arg,R,Basic
+GUU,Valine,Val,V,Nonpolar
+GUC,Valine,Val,V,Nonpolar
+GUA,Valine,Val,V,Nonpolar
+GUG,Valine,Val,V,Nonpolar
+GCU,Alanine,Ala,A,Nonpolar
+GCC,Alanine,Ala,A,Nonpolar
+GCA,Alanine,Ala,A,Nonpolar
+GCG,Alanine,Ala,A,Nonpolar
+GAU,Aspartic acid,Asp,D,Acidic
+GAC,Aspartic acid,Asp,D,Acidic
+GAA,Glutamic acid,Glu,E,Acidic
+GAG,Glutamic acid,Glu,E,Acidic
+GGU,Glycine,Gly,G,Nonpolar
+GGC,Glycine,Gly,G,Nonpolar
+GGA,Glycine,Gly,G,Nonpolar
+GGG,Glycine,Gly,G,Nonpolar
