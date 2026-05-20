@@ -61,13 +61,29 @@ template_strand = "5' ATGAATGTGTGC 3'"
 bio = BioInfoTrans(template_strand, codon_df)
 
 dna_copy, rna, protein = bio.info_transfer()
-rna_bases = rna[2:-2]
 
-analysis = ReadingFrameAnalysis(bio)
-analysis.three_frames_translation(rna_bases)
-analysis.six_frames_translation(rna_bases)
+analysis = ReadingFrameAnalysis(bio, rna)
+analysis.six_frames_translation()
 
-print(gc_content(rna_bases))
+print(gc_content(analysis.rna_bases))
+```
+
+```
+output:
+
+DNA Template Strand: 5'ATGAATGTGTGC3'
+DNA Replication: 3'TACTTACACACG5'
+RNA Transcription: 3'UACUUACACACG5'
+Protein Translation: C-His-Ile-His-Ala-N
+  F  T  H
+ S  H  T
+H  I  H  A
+UACUUACACACG
+AUGAAUGUGUGC
+  M  N  V  C
+    E  C  V
+   *  M  C
+41.66666666666667
 ```
 
 Recommended codon table
