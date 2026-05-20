@@ -50,8 +50,35 @@ class BioInfoTrans:
         return base_pair
 
     def base_pair_RNA(self, bases):
-        # A - T
+        # A - U
         # G - C
         base_table = str.maketrans("AUGC", "UACG")
         base_pair = bases.translate(base_table)
         return base_pair
+
+    def match_codons(
+        self, bases, RNA_polarity, name_type="Short Name", frame=1, terminus=True
+    ):
+        # split into triplets based on reading frame
+        # 1 = default, start from first amino acid
+        n = 3
+        triplets = [(bases[i : i + n]) for i in range(frame - 1, len(bases) - frame, n)]
+
+        protein = []
+        for t in triplets:
+            if RNA_polarity[1] == "5'":  # if 3'-5', read right to left i.e. backwards
+                t = t[::-1]  # reverse the codon i.e. AUG -> GUA
+
+            codon = self.codon_df.loc[self.codon_df["Codon"] == t, name_type].item()
+            protein.append(codon)
+
+        # check RNA_polarity and insert N/C terminus
+        if terminus:
+            if RNA_polarity[1] == "5'":  # if 3'-5', read right to left i.e. backwards
+                protein.append("N")  # add N at end
+                protein.insert(0, "C")  # add C at start
+            else:  # if 5'-3', read left to right i.e. forwards
+                protein.append("C")  # add C at end
+                protein.insert(0, "N")  # add N at start
+
+        return protein
