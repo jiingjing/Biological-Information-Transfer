@@ -55,7 +55,7 @@ from sequence_utils import gc_content
 
 # codon table DataFrame
 # with columns incl. Codon, Short Name, Letter
-codon_df = pd.DataFrame([...])
+codon_df = pd.read_csv(...)
 
 template_strand = "5' ATGAATGTGTGC 3'"
 bio = BioInfoTrans(template_strand, codon_df)
