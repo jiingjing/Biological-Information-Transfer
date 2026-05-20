@@ -102,7 +102,7 @@ from information_transfer import BioInfoTrans
 from reading_frame import ReadingFrameAnalysis
 from sequence_utils import gc_content
 
-# codon table DataFrame with columns: Codon, Short Name, Letter
+# codon table DataFrame with columns incl. Codon, Short Name, Letter
 codon_df = pd.DataFrame([...])
 
 template_strand = "5' ATGAATGTGTGC 3'"
@@ -117,6 +117,12 @@ analysis.six_frames_translation(rna_bases)
 
 print(gc_content(rna_bases))
 ```
+
+Recommended codon table
+
+- Preferred: download the RNA codon table CSV from https://codontable.org/codon-table
+- Alternative: use the table at `codon_tables/codon-table-standard-rna.csv`
+- Format: CSV (UTF-8) with a header row. Expected columns: `Codon`, `Short Name`, `Letter`
 
 ## Notes
 
