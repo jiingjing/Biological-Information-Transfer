@@ -82,3 +82,42 @@ class BioInfoTrans:
                 protein.insert(0, "N")  # add N at start
 
         return protein
+
+    def replicate_DNA(self):
+        replicated = self.base_pair_DNA(self.bases)
+        return self.template_polarity[1] + replicated + self.template_polarity[0]
+
+    def transcribe_RNA(self):
+        transcribed = self.DNA_to_RNA(self.bases)
+        transcribed = self.base_pair_RNA(transcribed)
+        return self.template_polarity[1] + transcribed + self.template_polarity[0]
+
+    def translate_RNA(
+        self, rna_bases, RNA_polarity=None, name_type="Short Name", terminus=True
+    ):
+        if RNA_polarity is None:
+            RNA_polarity = self.template_polarity[::-1]
+        return self.match_codons(
+            rna_bases, RNA_polarity, name_type=name_type, terminus=terminus
+        )
+
+    def info_transfer(self):
+        # Template strand
+        print(
+            f"DNA Template Strand: {self.template_polarity[0] + self.bases + self.template_polarity[1]}"
+        )
+
+        # DNA replication
+        replicated = self.replicate_DNA()
+        print(f"DNA Replication: {replicated}")
+
+        # Transcription
+        transcribed = self.transcribe_RNA()
+        print(f"RNA Transcription: {transcribed}")
+
+        # Translation
+        proteins = self.translate_RNA(rna_bases=transcribed[2:-2])
+        proteins = "-".join(proteins)
+        print(f"Protein Translation: {proteins}")
+
+        return replicated, transcribed, proteins
