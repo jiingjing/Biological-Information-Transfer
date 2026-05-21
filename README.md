@@ -150,6 +150,7 @@ Recommended codon table
 - Protein chains grow from the amino (N) terminus to the carboxyl (C) terminus
 
   ![A Codon Chart](https://openlearninglibrary.mit.edu/assets/courseware/v1/522a130818e51e7d580bc9834ad314b6/asset-v1:OCW+Pre-7.01+1T2020+type@asset+block/p0.png)
+
   _A Codon Chart_
 
 ### Reading frames
