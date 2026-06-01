@@ -45,6 +45,18 @@ The process produces:
 
 ## Usage
 
+```
+    git clone https://github.com/jiingjing/Biological-Information-Transfer.git
+```
+
+In the `Biological-Information-Transfer` directory, create and activate the virtual env:
+
+```
+    python3 -m venv .venv
+    source .venv/bin/activate
+    pip install -r requirements.txt
+```
+
 Example usage in Python:
 
 ```python
