@@ -76,6 +76,9 @@ class ReadingFrameAnalysis:
             Line 3: Frame 1 amino acids
             Line 4: RNA sequence
 
+        Returns:
+            Tuple[List[str], List[str], List[str]]: A tuple containing the three frames as lists of amino acids.
+
         Examples:
             >>> analysis.three_frames_translation()
             (prints formatted frame analysis)
@@ -108,6 +111,8 @@ class ReadingFrameAnalysis:
 
         print(f"{protein_3}\n{protein_2}\n{protein_1}\n{self.rna_bases}")
 
+        return frame_1, frame_2, frame_3
+
     def six_frames_translation(self) -> None:
         """
         Display translation of RNA in all six possible reading frames.
@@ -120,6 +125,9 @@ class ReadingFrameAnalysis:
             Line 4: Forward RNA bases
             Line 5: Complementary RNA bases
             Lines 6-8: Complementary strand frames 1, 2, 3
+
+        Returns:
+            Tuple[Tuple[List[str], List[str], List[str]], Tuple[List[str], List[str], List[str]]]: A tuple containing the forward strand frames and complementary strand frames as lists of amino acids.
 
         Examples:
             >>> analysis.six_frames_translation()
@@ -184,3 +192,5 @@ class ReadingFrameAnalysis:
         print(
             f"{protein_3}\n{protein_2}\n{protein_1}\n→   {self.rna_bases}\n←   {c_transcribed_rna}\n{c_protein_1}\n{c_protein_2}\n{c_protein_3}"
         )
+
+        return (frame_1, frame_2, frame_3), (c_frame_1, c_frame_2, c_frame_3)
