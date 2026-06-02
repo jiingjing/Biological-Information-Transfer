@@ -69,7 +69,7 @@ from sequence_utils import gc_content
 # with columns incl. Codon, Short Name, Letter
 codon_df = pd.read_csv(...)
 
-template_strand = "5' ATGAATGTGTGC 3'"
+template_strand = "3' TACTTACACACG 5'"
 bio = BioInfoTrans(template_strand, codon_df)
 
 dna_copy, rna, protein = bio.info_transfer()
@@ -83,18 +83,18 @@ print(gc_content(analysis.rna_bases))
 ```
 output:
 
-DNA Template Strand: 5'ATGAATGTGTGC3'
-DNA Replication: 3'TACTTACACACG5'
-RNA Transcription: 3'UACUUACACACG5'
-Protein Translation: C-His-Ile-His-Ala-N
-  F  T  H
- S  H  T
-H  I  H  A
-UACUUACACACG
-AUGAAUGUGUGC
-  M  N  V  C
-    E  C  V
-   *  M  C
+DNA Template Strand: 3'TACTTACACACG5'
+DNA Replication: 5'ATGAATGTGTGC3'
+RNA Transcription: 5'AUGAAUGUGUGC3'
+Protein Translation: N-Met-Asn-Val-Cys-C
++3    E  C  V
++2   *  M  C
++1  M  N  V  C
+→   AUGAAUGUGUGC
+←   UACUUACACACG
+-1    H  I  H  A
+-2      F  T  H
+-3     S  H  T
 41.66666666666667
 ```
 
